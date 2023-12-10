@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter,Routes, Route } from "react-router-dom";
+import WarrperFunction from "./Context";
+import Web_Site from "./Web_Site";
+import Add_ToCard from "./Add_ToCard";
+import Logoin from "./Logoin";
+import About_Us from './About_Us'
+import Create_Account from "./Create_Account";
+import Buy_Now from "./Buy_Now";
+import BookMsg from "./BookMsg";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+   <>
+      <div className="App">
+         
+                  <WarrperFunction> 
+                         <BrowserRouter>
+                             <Routes>
+                                 <Route path='/' element={<Logoin></Logoin>}></Route>
+                                 <Route path='/add_card' element={<Add_ToCard></Add_ToCard>}></Route>
+                                 <Route path='/logout' element={<Logoin></Logoin>}></Route>
+                                 <Route path="/login/web" element={<Web_Site></Web_Site>}></Route>
+                                 <Route path="/create_accont" element={<Create_Account></Create_Account>}>
+                        
+                                 </Route>
+                                 <Route path='/aboutus' element={<About_Us></About_Us>}></Route>
+                                 <Route path='/buy' element={<Buy_Now></Buy_Now>}></Route>
+                                 <Route path='/create_account/login' element={<Logoin></Logoin>}></Route>
+                                  <Route path="/buy_now/book" element={<BookMsg></BookMsg>}></Route>
+                                  <Route path="/book/web" element={<Web_Site></Web_Site>}></Route>
+                             </Routes>
+                          </BrowserRouter>
+                   </WarrperFunction>
+      
+  
+    </div> 
+   </>
   );
 }
 

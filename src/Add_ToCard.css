@@ -1,0 +1,19 @@
+#row{
+    margin-left:50px;
+}
+.des{
+    color: blue;
+}
+.rat{
+    color: blueviolet;
+}
+.sto{
+    color: rgb(142, 165, 42);
+}
+.pri{
+    color: rgb(93, 220, 20);
+}
+.col-4>img,.col-6{
+    margin: top 15px;;
+    
+}
